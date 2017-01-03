@@ -1,5 +1,7 @@
 # SASS Node Components
 node_modules
+gulpfile.js
+tasks.json
 
 # Build and Release Folders
 bin/
