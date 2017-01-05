@@ -1,0 +1,21 @@
+@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+/* LAYOUT */
+$desktop: 'only screen' 1224px;
+$ipad: 'only screen' (min-device-width 768px) (max-device-width 1024px);
+$smartphone: 'only screen' (min-device-width 320px) (max-device-width 480px);
+
+/* Desktops and laptops ----------- */
+@include breakpoint ( $desktop ){
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@include breakpoint ( $ipad ) {
+/* Styles */
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@include breakpoint ( $smartphone ) {
+/* Styles */
+}
