@@ -1,15 +1,607 @@
-@media (max-width: 500px) {
-  background: blue; }
+/*
+Theme Name: Rolanda Delerme
+Theme URI: https://github.com/jgmaniegodev/rolandadelerme.com/tree/master/wp-content/themes/rolandadelerme
+Author: NY Omega Designs
+Author URI: http://www.nyomegadesigns.com
+Description: An exclusive customized theme for Rolanda Delerme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: white, light, one-column, two-columns, flexible-width, custom-header, custom-menu, editor-style, featured-images
+Text Domain: rolandadelerme
 
-nav ul {
+This is an exclusive theme.
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
-  padding: 6px;
-  list-style: none; }
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-nav li {
-  display: inline-block; }
-
-nav a {
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
-  padding: 6px 12px;
-  text-decoration: none; }
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* LAYOUT */
+/*
+$ipad: 'only screen' (min-device-width 768px) (max-device-width 1024px);
+$smartphone: 'only screen' (min-device-width 320px) (max-device-width 480px);
+*/
+/* Desktops and laptops ----------- */
+.wrapper {
+  margin: 0 auto;
+}
+
+.overlay-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.overlay-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
+  -webkit-transform: none;
+          transform: none;
+  -o-transform: none;
+  -moz-transform: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Styles */
+  body {
+    background: floralwhite;
+  }
+  section {
+    min-height: 380px;
+  }
+  footer {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .wrapper {
+    max-width: 1000px;
+  }
+  .banner {
+    height: 100vh;
+    max-height: 842px;
+  }
+  /* Nav */
+  .navbar-menu-container {
+    position: relative;
+  }
+  .navbar-menu-container .custom-logo-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .navbar-menu-container nav .menu {
+    text-align: center;
+  }
+  .navbar-menu-container nav .menu > li {
+    display: inline-block;
+    padding: 26px 12px;
+  }
+  .navbar-menu-container .socialbar {
+    position: absolute;
+    top: 19px;
+    right: 10px;
+  }
+  .saints-icons #saint-one {
+    top: 138px;
+    left: 27%;
+  }
+  .saints-icons #saint-two {
+    top: 185px;
+    left: 16%;
+  }
+  .saints-icons #saint-three {
+    top: 258px;
+    left: 8%;
+  }
+  .saints-icons #saint-four {
+    top: 358px;
+    left: 4%;
+  }
+  .saints-icons #saint-five {
+    top: 464px;
+    left: 5%;
+  }
+  .saints-icons #saint-six {
+    top: 560px;
+    left: 11%;
+  }
+  .saints-icons #saint-seven {
+    top: 628px;
+    left: 19%;
+  }
+  .saints-icons #saint-eight {
+    top: 138px;
+    right: 27%;
+  }
+  .saints-icons #saint-nine {
+    top: 185px;
+    right: 16%;
+  }
+  .saints-icons #saint-ten {
+    top: 258px;
+    right: 8%;
+  }
+  .saints-icons #saint-eleven {
+    top: 358px;
+    right: 4%;
+  }
+  .saints-icons #saint-twelve {
+    top: 464px;
+    right: 5%;
+  }
+  .saints-icons #saint-thirteen {
+    top: 560px;
+    right: 11%;
+  }
+  .saints-icons #saint-fourteen {
+    top: 628px;
+    right: 19%;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+  /* Styles */
+  body {
+    background: mintcream;
+  }
+  section {
+    min-height: 300px;
+  }
+  footer {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .wrapper {
+    max-width: 960px;
+  }
+  .banner {
+    height: 100vh;
+    max-height: 842px;
+  }
+  .saints-icons {
+    width: 100%;
+    height: 100%;
+  }
+  .saints-icons #saint-one {
+    top: 158px;
+    left: 2%;
+  }
+  .saints-icons #saint-two {
+    top: 256px;
+    left: 2%;
+  }
+  .saints-icons #saint-three {
+    top: 351px;
+    left: 2%;
+  }
+  .saints-icons #saint-four {
+    top: 447px;
+    left: 2%;
+  }
+  .saints-icons #saint-five {
+    top: 542px;
+    left: 2%;
+  }
+  .saints-icons #saint-six {
+    top: 638px;
+    left: 2%;
+  }
+  .saints-icons #saint-seven {
+    top: 734px;
+    left: 2%;
+  }
+  .saints-icons #saint-eight {
+    top: 158px;
+    right: 2%;
+  }
+  .saints-icons #saint-nine {
+    top: 256px;
+    right: 2%;
+  }
+  .saints-icons #saint-ten {
+    top: 351px;
+    right: 2%;
+  }
+  .saints-icons #saint-eleven {
+    top: 447px;
+    right: 2%;
+  }
+  .saints-icons #saint-twelve {
+    top: 542px;
+    right: 2%;
+  }
+  .saints-icons #saint-thirteen {
+    top: 638px;
+    right: 2%;
+  }
+  .saints-icons #saint-fourteen {
+    top: 734px;
+    right: 2%;
+  }
+  .navbar-menu-container {
+    position: relative;
+  }
+  .navbar-menu-container .custom-logo-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .navbar-menu-container nav .menu {
+    text-align: center;
+  }
+  .navbar-menu-container nav .menu > li {
+    display: inline-block;
+    padding: 26px 12px;
+  }
+  .navbar-menu-container .socialbar {
+    position: absolute;
+    top: 19px;
+    right: 10px;
+  }
+}
+
+/* Portables (portrait and landscape) ----------*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
+  body {
+    background: peachpuff;
+  }
+  section {
+    min-height: 200px;
+  }
+  footer {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .wrapper {
+    width: 100%;
+  }
+}
+
+body.custom-background {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center top !important;
+}
+
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.9em;
+}
+
+h3 {
+  font-size: 1.7em;
+}
+
+h4 {
+  font-size: 1.4em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.8em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 150%;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav ul li a {
+  color: #6e4213;
+  text-transform: uppercase;
+}
+
+.socialbar .menu li {
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.socialbar .menu li a {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  background: #6e4213;
+  width: 32px;
+  height: 24px;
+  padding-top: 6px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #eeeac8;
+  -webkit-transition: background ease-in-out 0.5s;
+  transition: background ease-in-out 0.5s;
+}
+
+.socialbar .menu li a:hover {
+  background: #eeeac8;
+  color: #6e4213;
+}
+
+/* General styles */
+/*
+    Navigation Bar
+ */
+.navbar {
+  position: absolute;
+  z-index: 9999;
+  top: 24px;
+  width: 100%;
+}
+
+.navbar .navbar-container {
+  position: relative;
+  width: 100%;
+}
+
+.navbar .navbar-container .navbar-side {
+  height: 68px;
+  width: 59px;
+  position: absolute;
+}
+
+.navbar .navbar-container .navbar-left-style {
+  background-image: url("img/menu/left_menu.png");
+  background-repeat: no-repeat;
+  left: 0;
+  top: 0;
+}
+
+.navbar .navbar-container .navbar-right-style {
+  background-image: url("img/menu/right_menu.png");
+  background-repeat: no-repeat;
+  right: 0;
+  top: 0;
+}
+
+.navbar .navbar-container .navbar-menu-container {
+  background-image: url("img/menu/gr_menu.png");
+  background-repeat: repeat-x;
+  height: 68px;
+  margin-left: 56px;
+  margin-right: 56px;
+}
+
+/* Menu */
+/* Banner */
+.banner .overlay-bg {
+  z-index: -1;
+}
+
+.banner .flowers-bg {
+  position: relative;
+}
+
+.banner .flowers-bg .flower {
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.banner .flowers-bg .flower1 {
+  background-image: url("img/banner/flower_01.png");
+  top: 323px;
+  left: 16%;
+  width: 259px;
+  height: 275px;
+}
+
+.banner .flowers-bg .flower2 {
+  background-image: url("img/banner/flower_02.png");
+  top: 488px;
+  left: 60%;
+  width: 216px;
+  height: 275px;
+}
+
+.banner .birds-bg {
+  position: relative;
+}
+
+.banner .birds-bg .birds {
+  position: absolute;
+  left: 49%;
+  top: 90px;
+}
+
+.banner .saints-icons {
+  position: relative;
+  z-index: 999;
+}
+
+.banner .saints-icons .saint-icon {
+  position: absolute;
+  background-image: url("img/banner/saint_sprites.png");
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all ease-in 0.5s;
+  transition: all ease-in 0.5s;
+  cursor: pointer;
+  display: block;
+}
+
+.banner .saints-icons .saint-icon:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.banner .saints-icons #saint-one {
+  background-position: 0px 0px;
+}
+
+.banner .saints-icons #saint-two {
+  background-position: -87px 0px;
+}
+
+.banner .saints-icons #saint-three {
+  background-position: -174px 0px;
+}
+
+.banner .saints-icons #saint-four {
+  background-position: -260px 0px;
+}
+
+.banner .saints-icons #saint-five {
+  background-position: 0px -87px;
+}
+
+.banner .saints-icons #saint-six {
+  background-position: -87px -87px;
+}
+
+.banner .saints-icons #saint-seven {
+  background-position: -174px -87px;
+}
+
+.banner .saints-icons #saint-eight {
+  background-position: -260px -87px;
+}
+
+.banner .saints-icons #saint-nine {
+  background-position: 0px -174px;
+}
+
+.banner .saints-icons #saint-ten {
+  background-position: -87px -174px;
+}
+
+.banner .saints-icons #saint-eleven {
+  background-position: -174px -174px;
+}
+
+.banner .saints-icons #saint-twelve {
+  background-position: -260px -174px;
+}
+
+.banner .saints-icons #saint-thirteen {
+  background-position: 0px -260px;
+}
+
+.banner .saints-icons #saint-fourteen {
+  background-position: -87px -260px;
+}
+
+.banner .dp-images {
+  position: relative;
+  top: 170px;
+}
+
+.banner .dp-images .dp-picture,
+.banner .dp-images .dp-name {
+  position: absolute;
+}
+
+.banner .dp-images .dp-picture {
+  left: 25%;
+}
+
+.banner .dp-images .dp-name {
+  width: 422px;
+  height: 209px;
+  top: 424px;
+  left: 27%;
+}
+
+/* Sections */
+section .wrapper {
+  padding: 3%;
+  box-sizing: border-box;
+}
+
+#about-me {
+  background-color: #eeeac8;
+}
+
+#about-me .wrapper {
+  background-image: url("img/separator.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#services {
+  background-image: url("img/clouds-wallpaper-7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#services .wrapper {
+  background-image: url("img/separator.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#contact {
+  background-color: #eeeac8;
+}
+
+#contact .wrapper {
+  background-image: url("img/separator.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+/* Footer */
+/* Social Media */

@@ -1,0 +1,73 @@
+body {
+    font-family: "Georgia", "Times New Roman", serif;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.9em;
+}
+
+h3 {
+    font-size: 1.7em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.8em;
+}
+
+p {
+    font-size: 1em;
+    line-height: 150%;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    ul {
+        li {
+            a {
+                color: $link;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.socialbar {
+    .menu {
+        li {
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+            a {
+                display: block;
+                font-size: 20px;
+                color: #fff;
+                background: $link;
+                width: 32px;
+                height: 24px;
+                padding-top: 6px;
+                @include rounded(5px);
+                border: 1px solid $cream;
+                transition: background ease-in-out 0.5s;
+                &:hover {
+                    background: $cream;
+                    color: $link;
+                }
+            }
+        }
+    }
+}

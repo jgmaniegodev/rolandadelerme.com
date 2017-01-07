@@ -1,2 +1,226 @@
+/*
+Theme Name: Rolanda Delerme
+Theme URI: https://github.com/jgmaniegodev/rolandadelerme.com/tree/master/wp-content/themes/rolandadelerme
+Author: NY Omega Designs
+Author URI: http://www.nyomegadesigns.com
+Description: An exclusive customized theme for Rolanda Delerme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: white, light, one-column, two-columns, flexible-width, custom-header, custom-menu, editor-style, featured-images
+Text Domain: rolandadelerme
+
+This is an exclusive theme.
+*/
+
+@import "meyer-reset";
 @import "variables";
+@import "mixins";
 @import "layout";
+@import "hookedstyles";
+@import "typography";
+
+/* General styles */
+
+
+/*
+    Navigation Bar
+ */
+
+.navbar {
+    position: absolute;
+    z-index: 9999;
+    top: 24px;
+    width: 100%;
+    .navbar-container {
+        position: relative;
+        width: 100%;
+        .navbar-side {
+            height: 68px;
+            width: 59px;
+            position: absolute;
+        }
+        .navbar-left-style {
+            background-image: url('img/menu/left_menu.png');
+            background-repeat: no-repeat;
+            left: 0;
+            top: 0;
+        }
+        .navbar-right-style {
+            background-image: url('img/menu/right_menu.png');
+            background-repeat: no-repeat;
+            right: 0;
+            top: 0;
+        }
+        .navbar-menu-container {
+            background-image: url('img/menu/gr_menu.png');
+            background-repeat: repeat-x;
+            height: 68px;
+            margin-left: 56px;
+            margin-right: 56px;
+        }
+    }
+}
+
+
+/* Menu */
+
+nav {}
+
+
+/* Banner */
+
+.banner {
+    .overlay-bg {
+        z-index: -1;
+    }
+    .flowers-bg {
+        position: relative;
+        .flower {
+            position: absolute;
+            background-repeat: no-repeat;
+        }
+        .flower1 {
+            background-image: url('img/banner/flower_01.png');
+            top: 323px;
+            left: 16%;
+            width: 259px;
+            height: 275px;
+        }
+        .flower2 {
+            background-image: url('img/banner/flower_02.png');
+            top: 488px;
+            left: 60%;
+            width: 216px;
+            height: 275px;
+        }
+    }
+    .birds-bg {
+        position: relative;
+        .birds {
+            position: absolute;
+            left: 49%;
+            top: 90px;
+        }
+    }
+    .saints-icons {
+        position: relative;
+        z-index: 999;
+        .saint-icon {
+            position: absolute;
+            background-image: url('img/banner/saint_sprites.png');
+            background-repeat: no-repeat;
+            width: 80px;
+            height: 80px;
+            -webkit-transform-style: preserve-3d;
+            transition: all ease-in 0.5s;
+            cursor: pointer;
+            display: block;
+            &:hover {
+                transform: rotateY(180deg);
+            }
+        }
+        #saint-one {
+            background-position: 0px 0px;
+        }
+        #saint-two {
+            background-position: -87px 0px;
+        }
+        #saint-three {
+            background-position: -174px 0px;
+        }
+        #saint-four {
+            background-position: -260px 0px;
+        }
+        #saint-five {
+            background-position: 0px -87px;
+        }
+        #saint-six {
+            background-position: -87px -87px;
+        }
+        #saint-seven {
+            background-position: -174px -87px;
+        }
+        #saint-eight {
+            background-position: -260px -87px;
+        }
+        #saint-nine {
+            background-position: 0px -174px;
+        }
+        #saint-ten {
+            background-position: -87px -174px;
+        }
+        #saint-eleven {
+            background-position: -174px -174px;
+        }
+        #saint-twelve {
+            background-position: -260px -174px;
+        }
+        #saint-thirteen {
+            background-position: 0px -260px;
+        }
+        #saint-fourteen {
+            background-position: -87px -260px;
+        }
+    }
+    .dp-images {
+        position: relative;
+        top: 170px;
+        .dp-picture,
+        .dp-name {
+            position: absolute;
+        }
+        .dp-picture {
+            left: 25%;
+        }
+        .dp-name {
+            width: 422px;
+            height: 209px;
+            top: 424px;
+            left: 27%;
+        }
+    }
+}
+
+
+/* Sections */
+
+section {
+    .wrapper {
+        padding: 3%;
+        box-sizing: border-box;
+    }
+}
+
+#about-me {
+    background-color: $cream;
+    .wrapper {
+        @include addSeparator;
+    }
+}
+
+#services {
+    background-image: url('img/clouds-wallpaper-7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    .wrapper {
+        @include addSeparator;
+    }
+}
+
+#contact {
+    background-color: $cream;
+    .wrapper {
+        @include addSeparator;
+    }
+}
+
+
+/* Footer */
+
+footer {}
+
+
+/* Social Media */

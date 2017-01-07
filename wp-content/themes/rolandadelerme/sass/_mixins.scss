@@ -1,0 +1,11 @@
+@mixin rounded ( $roundness) {
+    border-radius: $roundness;
+    -moz-border-radius: $roundness;
+    -webkit-border-radius: $roundness;
+}
+
+@mixin addSeparator () {
+    background-image: url('img/separator.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}

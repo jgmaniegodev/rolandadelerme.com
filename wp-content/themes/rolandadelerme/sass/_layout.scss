@@ -1,21 +1,269 @@
-@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import "node_modules/breakpoint-sass/stylesheets/breakpoint";
 
 /* LAYOUT */
-$desktop: 'only screen' 1224px;
+
+$desktop: 'only screen' 1024px;
+
+/*
 $ipad: 'only screen' (min-device-width 768px) (max-device-width 1024px);
 $smartphone: 'only screen' (min-device-width 320px) (max-device-width 480px);
+*/
+
+$ipad: 'only screen' 800px 1024px;
+$portable: 'only screen' 480px 800px;
+$smartphone: 'only screen' 320px 480px;
 
 /* Desktops and laptops ----------- */
-@include breakpoint ( $desktop ){
-/* Styles */
+
+.wrapper {
+    margin: 0 auto;
 }
+
+.overlay-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        -o-object-fit: cover;
+        transform: none;
+        -o-transform: none;
+        -moz-transform: none;
+    }
+}
+
+@include breakpoint ( $desktop) {
+    /* Styles */
+    body {
+        background: floralwhite;
+    }
+    section {
+        min-height: 380px;
+    }
+    footer {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .wrapper {
+        max-width: 1000px;
+    }
+    .banner {
+        height: 100vh;
+        max-height: 842px;
+    }
+    .overlay-bg {}
+    /* Nav */
+    .navbar-menu-container {
+        position: relative;
+        .custom-logo-link {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        nav {
+            .menu {
+                text-align: center;
+                >li {
+                    display: inline-block;
+                    padding: 26px 12px;
+                }
+            }
+        }
+        .socialbar {
+            position: absolute;
+            top: 19px;
+            right: 10px;
+        }
+    }
+    .saints-icons {
+        #saint-one {
+            top: 138px;
+            left: 27%;
+        }
+        #saint-two {
+            top: 185px;
+            left: 16%;
+        }
+        #saint-three {
+            top: 258px;
+            left: 8%;
+        }
+        #saint-four {
+            top: 358px;
+            left: 4%;
+        }
+        #saint-five {
+            top: 464px;
+            left: 5%;
+        }
+        #saint-six {
+            top: 560px;
+            left: 11%;
+        }
+        #saint-seven {
+            top: 628px;
+            left: 19%;
+        }
+        #saint-eight {
+            top: 138px;
+            right: 27%;
+        }
+        #saint-nine {
+            top: 185px;
+            right: 16%;
+        }
+        #saint-ten {
+            top: 258px;
+            right: 8%;
+        }
+        #saint-eleven {
+            top: 358px;
+            right: 4%;
+        }
+        #saint-twelve {
+            top: 464px;
+            right: 5%;
+        }
+        #saint-thirteen {
+            top: 560px;
+            right: 11%;
+        }
+        #saint-fourteen {
+            top: 628px;
+            right: 19%;
+        }
+    }
+}
+
 
 /* iPads (portrait and landscape) ----------- */
-@include breakpoint ( $ipad ) {
-/* Styles */
+
+@include breakpoint ( $ipad) {
+    /* Styles */
+    body {
+        background: mintcream;
+    }
+    section {
+        min-height: 300px;
+    }
+    footer {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .wrapper {
+        max-width: 960px;
+    }
+    .banner {
+        height: 100vh;
+        max-height: 842px;
+    }
+    .saints-icons {
+        width: 100%;
+        height: 100%;
+        #saint-one {
+            top: 158px;
+            left: 2%;
+        }
+        #saint-two {
+            top: 256px;
+            left: 2%;
+        }
+        #saint-three {
+            top: 351px;
+            left: 2%;
+        }
+        #saint-four {
+            top: 447px;
+            left: 2%;
+        }
+        #saint-five {
+            top: 542px;
+            left: 2%;
+        }
+        #saint-six {
+            top: 638px;
+            left: 2%;
+        }
+        #saint-seven {
+            top: 734px;
+            left: 2%;
+        }
+        #saint-eight {
+            top: 158px;
+            right: 2%;
+        }
+        #saint-nine {
+            top: 256px;
+            right: 2%;
+        }
+        #saint-ten {
+            top: 351px;
+            right: 2%;
+        }
+        #saint-eleven {
+            top: 447px;
+            right: 2%;
+        }
+        #saint-twelve {
+            top: 542px;
+            right: 2%;
+        }
+        #saint-thirteen {
+            top: 638px;
+            right: 2%;
+        }
+        #saint-fourteen {
+            top: 734px;
+            right: 2%;
+        }
+    }
+    .navbar-menu-container {
+        position: relative;
+        .custom-logo-link {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        nav {
+            .menu {
+                text-align: center;
+                >li {
+                    display: inline-block;
+                    padding: 26px 12px;
+                }
+            }
+        }
+        .socialbar {
+            position: absolute;
+            top: 19px;
+            right: 10px;
+        }
+    }
 }
 
+
+/* Portables (portrait and landscape) ----------*/
+
+@include breakpoint ( $portable) {}
+
+
 /* Smartphones (portrait and landscape) ----------- */
-@include breakpoint ( $smartphone ) {
-/* Styles */
+
+@include breakpoint ( $smartphone) {
+    /* Styles */
+    body {
+        background: peachpuff;
+    }
+    section {
+        min-height: 200px;
+    }
+    footer {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .wrapper {
+        width: 100%;
+    }
 }
