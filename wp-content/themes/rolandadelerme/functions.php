@@ -59,6 +59,7 @@ function rolandadelerme_setup() {
 	// 	This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
 	'primary' => __( 'Primary Menu',      'rolandadelerme' ),
+	'mobile' => __('Mobile Menu', 'rolandadelerme'),
 	'social'  => __( 'Social Links Menu', 'rolandadelerme' ),
 	) );
 	
@@ -142,7 +143,13 @@ function get_wppage($slug){
     // "loop" through query (even though it's just one page) 
     while ( $page_query->have_posts() ) : $page_query->the_post();
 		?>
-<h2 class="entry-title"><?php the_title(); ?></h2>
+<div class="elegant-box">
+	<div class="elegant-box-left elegant-box-side"></div>
+	<div class="elegant-box-content">
+		<h2 class="entry-title"><?php the_title(); ?></h2>
+		</div>
+		<div class="elegant-box-right elegant-box-side"></div>
+		</div>
 		<?php
         the_content();
     endwhile;

@@ -9,14 +9,15 @@ $ipad: 'only screen' (min-device-width 768px) (max-device-width 1024px);
 $smartphone: 'only screen' (min-device-width 320px) (max-device-width 480px);
 */
 
-$ipad: 'only screen' 800px 1024px;
-$portable: 'only screen' 480px 800px;
-$smartphone: 'only screen' 320px 480px;
+$ipad: 'only screen' 769px 1024px;
+$portable: 'only screen' 480px 768px;
+$smartphone: 'only screen' max-width 480px;
 
 /* Desktops and laptops ----------- */
 
 .wrapper {
     margin: 0 auto;
+    min-width: 320px;
 }
 
 .overlay-bg {
@@ -31,6 +32,169 @@ $smartphone: 'only screen' 320px 480px;
         transform: none;
         -o-transform: none;
         -moz-transform: none;
+    }
+}
+
+.menu-mobile-menu-container {
+    @include breakpoint(($desktop, $ipad)) {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.menu-primary-container {
+    @include breakpoint(($portable, $smartphone)) {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.menu-button {
+    position: absolute;
+    @include breakpoint($portable) {
+        top: 17px;
+        right: 60px;
+    }
+    @include breakpoint($smartphone) {
+        top: 18px;
+        right: 8px;
+    }
+}
+
+
+/* Banner */
+
+@include breakpoint(($desktop, $ipad)) {
+    .banner {
+        .flowers-bg {
+            .flower1 {
+                top: 323px;
+                left: 16%;
+            }
+            .flower2 {
+                top: 488px;
+                left: 60%;
+            }
+        }
+        .birds-bg {
+            .birds {
+                left: 49%;
+                top: 90px;
+            }
+        }
+        .dp-images {
+            top: 170px;
+            .dp-picture {
+                left: 25%;
+            }
+            .dp-name {
+                width: 422px;
+                height: 209px;
+                top: 424px;
+                left: 27%;
+            }
+        }
+        .saints-icons {
+            position: relative;
+            z-index: 999;
+            .saint-icon {
+                position: absolute;
+            }
+        }
+    }
+}
+
+@include breakpoint($portable) {
+    .banner {
+        .flowers-bg {
+            .flower1 {
+                top: 200px;
+                left: 9%;
+            }
+            .flower2 {
+                top: 320px;
+                left: 53%;
+            }
+        }
+        .birds-bg {
+            .birds {
+                left: 49%;
+                top: 90px;
+            }
+        }
+        .dp-images {
+            top: 170px;
+            .dp-picture {
+                left: 23%;
+            }
+            .dp-name {
+                width: 50%;
+                top: 270px;
+                left: 23%;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .saints-icons {
+            position: absolute;
+            left: 4%;
+            bottom: 1%;
+            .saint-icon {
+                float: left;
+                margin: 1%;
+            }
+        }
+    }
+}
+
+@include breakpoint($smartphone) {
+    .banner {
+        margin-top: 68px;
+        .flowers-bg {
+            .flower1 {
+                top: 120px;
+                left: 3%;
+            }
+            .flower2 {
+                top: 270px;
+                left: 67%;
+            }
+        }
+        .birds-bg {
+            .birds {
+                left: 49%;
+                top: 90px;
+            }
+        }
+        .dp-images {
+            top: 57px;
+            .dp-picture {
+                left: 7%;
+            }
+            .dp-name {
+                width: 50%;
+                top: 270px;
+                left: 23%;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .saints-icons {
+            display: none;
+            position: absolute;
+            left: 4%;
+            bottom: 1%;
+            .saint-icon {
+                float: left;
+                margin: 1%;
+            }
+        }
     }
 }
 
@@ -63,18 +227,18 @@ $smartphone: 'only screen' 320px 480px;
             top: 0;
         }
         nav {
-            .menu {
-                text-align: center;
-                >li {
-                    display: inline-block;
-                    padding: 26px 12px;
+            .menu-primary-container {
+                display: block;
+                visibility: visible;
+                opacity: 1;
+                .menu {
+                    text-align: center;
+                    >li {
+                        display: inline-block;
+                        padding: 26px 12px;
+                    }
                 }
             }
-        }
-        .socialbar {
-            position: absolute;
-            top: 19px;
-            right: 10px;
         }
     }
     .saints-icons {
@@ -133,6 +297,17 @@ $smartphone: 'only screen' 320px 480px;
         #saint-fourteen {
             top: 628px;
             right: 19%;
+        }
+    }
+    .dp-images {
+        .dp-picture {
+            left: 25%;
+        }
+        .dp-name {
+            width: 422px;
+            height: 209px;
+            top: 424px;
+            left: 27%;
         }
     }
 }
@@ -219,6 +394,8 @@ $smartphone: 'only screen' 320px 480px;
             right: 2%;
         }
     }
+    /* */
+    /* */
     .navbar-menu-container {
         position: relative;
         .custom-logo-link {
@@ -227,18 +404,18 @@ $smartphone: 'only screen' 320px 480px;
             top: 0;
         }
         nav {
-            .menu {
-                text-align: center;
-                >li {
-                    display: inline-block;
-                    padding: 26px 12px;
+            .menu-primary-container {
+                display: block;
+                visibility: visible;
+                opacity: 1;
+                .menu {
+                    text-align: center;
+                    >li {
+                        display: inline-block;
+                        padding: 26px 12px;
+                    }
                 }
             }
-        }
-        .socialbar {
-            position: absolute;
-            top: 19px;
-            right: 10px;
         }
     }
 }
@@ -246,16 +423,33 @@ $smartphone: 'only screen' 320px 480px;
 
 /* Portables (portrait and landscape) ----------*/
 
-@include breakpoint ( $portable) {}
+@include breakpoint ( $portable) {
+    .banner {
+        height: 842px;
+    }
+    .dp-images {
+        .dp-picture {
+            left: 27%;
+            img {
+                width: 70%;
+                min-width: 278px;
+                height: auto;
+            }
+        }
+    }
+    .saints-icons {
+        bottom: 0%;
+    }
+    .menu-mobile-menu-container {
+        display: none;
+    }
+}
 
 
 /* Smartphones (portrait and landscape) ----------- */
 
 @include breakpoint ( $smartphone) {
     /* Styles */
-    body {
-        background: peachpuff;
-    }
     section {
         min-height: 200px;
     }
@@ -265,5 +459,24 @@ $smartphone: 'only screen' 320px 480px;
     }
     .wrapper {
         width: 100%;
+    }
+    .banner {
+        height: 468px;
+    }
+    .dp-images {
+        .dp-picture {
+            left: 27%;
+            img {
+                width: 70%;
+                min-width: 278px;
+                height: auto;
+            }
+        }
+    }
+    .saints-icons {
+        bottom: 0%;
+    }
+    .menu-mobile-menu-container {
+        display: none;
     }
 }

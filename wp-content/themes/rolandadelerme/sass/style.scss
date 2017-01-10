@@ -27,38 +27,93 @@ This is an exclusive theme.
     Navigation Bar
  */
 
-.navbar {
-    position: absolute;
-    z-index: 9999;
-    top: 24px;
-    width: 100%;
-    .navbar-container {
-        position: relative;
+@include breakpoint(($desktop, $ipad, $portable)) {
+    .navbar {
+        position: absolute;
+        z-index: 9999;
+        top: 24px;
         width: 100%;
-        .navbar-side {
-            height: 68px;
-            width: 59px;
-            position: absolute;
+        .navbar-container {
+            position: relative;
+            width: 100%;
         }
-        .navbar-left-style {
-            background-image: url('img/menu/left_menu.png');
-            background-repeat: no-repeat;
-            left: 0;
-            top: 0;
-        }
-        .navbar-right-style {
-            background-image: url('img/menu/right_menu.png');
-            background-repeat: no-repeat;
-            right: 0;
-            top: 0;
-        }
-        .navbar-menu-container {
-            background-image: url('img/menu/gr_menu.png');
-            background-repeat: repeat-x;
-            height: 68px;
-            margin-left: 56px;
-            margin-right: 56px;
-        }
+    }
+    .navbar-side {
+        height: 68px;
+        width: 59px;
+        position: absolute;
+    }
+    .navbar-left-style {
+        background-image: url('img/menu/left_menu.png');
+        background-repeat: no-repeat;
+        left: 0;
+        top: 0;
+    }
+    .navbar-right-style {
+        background-image: url('img/menu/right_menu.png');
+        background-repeat: no-repeat;
+        right: 0;
+        top: 0;
+    }
+    .navbar-menu-container {
+        background-image: url('img/menu/gr_menu.png');
+        background-repeat: repeat-x;
+        height: 68px;
+        margin-left: 56px;
+        margin-right: 56px;
+    }
+}
+
+
+/* Elegnat box */
+
+.elegant-box:after {
+    display: block;
+    height: 0;
+    content: '';
+    clear: both;
+}
+
+.elegant-box {
+    position: relative;
+    margin-bottom: 12px;
+    width: 100%;
+    text-align: center;
+    display: table;
+    .elegant-box-side {
+        height: 68px;
+        width: 59px;
+        display: inline-block;
+    }
+    .elegant-box-left {
+        background-image: url('img/menu/left_menu.png');
+        background-repeat: no-repeat;
+    }
+    .elegant-box-right {
+        background-image: url('img/menu/right_menu.png');
+        background-repeat: no-repeat;
+    }
+    .elegant-box-content {
+        overflow: hidden;
+        display: inline-block;
+        background-image: url('img/menu/gr_menu.png');
+        padding-top: 12px;
+        background-repeat: repeat-x;
+        height: 56px;
+    }
+}
+
+@include breakpoint($smartphone) {
+    .navbar {
+        top: 0;
+        position: fixed;
+        background: rgba(255, 255, 255, 0.6);
+        width: 100%;
+        height: 68px;
+        padding: 4px 4px;
+        z-index: 99999;
+        border-bottom: 1px solid #fff;
+        .navbar-container {}
     }
 }
 
@@ -66,6 +121,33 @@ This is an exclusive theme.
 /* Menu */
 
 nav {}
+
+.navbar {
+    box-sizing: border-box;
+}
+
+.menu-mobile-menu-container {
+    background: rgba(255, 255, 255, 1);
+    z-index: 999;
+    position: relative;
+    margin-top: 4px;
+    .menu {
+        li {
+            text-align: center;
+            border-bottom: 1px dashed $link;
+            &:last-child {
+                border-bottom: none;
+            }
+            a {
+                padding: 12px;
+                display: block;
+                &:hover {
+                    background: $cream;
+                }
+            }
+        }
+    }
+}
 
 
 /* Banner */
@@ -79,39 +161,47 @@ nav {}
         .flower {
             position: absolute;
             background-repeat: no-repeat;
+            background-size: contain;
         }
         .flower1 {
             background-image: url('img/banner/flower_01.png');
-            top: 323px;
-            left: 16%;
-            width: 259px;
+            width: 30%;
             height: 275px;
+            max-width: 259px;
         }
         .flower2 {
             background-image: url('img/banner/flower_02.png');
-            top: 488px;
-            left: 60%;
-            width: 216px;
+            width: 30%;
             height: 275px;
+            max-width: 216px;
         }
     }
     .birds-bg {
         position: relative;
         .birds {
             position: absolute;
-            left: 49%;
-            top: 90px;
+            width: 30%;
+            height: 317px;
+            max-width: 258px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .dp-images {
+        position: relative;
+        .dp-picture,
+        .dp-name {
+            position: absolute;
         }
     }
     .saints-icons {
-        position: relative;
-        z-index: 999;
         .saint-icon {
-            position: absolute;
             background-image: url('img/banner/saint_sprites.png');
             background-repeat: no-repeat;
-            width: 80px;
             height: 80px;
+            width: 80px;
             -webkit-transform-style: preserve-3d;
             transition: all ease-in 0.5s;
             cursor: pointer;
@@ -163,23 +253,6 @@ nav {}
             background-position: -87px -260px;
         }
     }
-    .dp-images {
-        position: relative;
-        top: 170px;
-        .dp-picture,
-        .dp-name {
-            position: absolute;
-        }
-        .dp-picture {
-            left: 25%;
-        }
-        .dp-name {
-            width: 422px;
-            height: 209px;
-            top: 424px;
-            left: 27%;
-        }
-    }
 }
 
 
@@ -187,7 +260,7 @@ nav {}
 
 section {
     .wrapper {
-        padding: 3%;
+        padding: 3% 7%;
         box-sizing: border-box;
     }
 }
@@ -223,4 +296,84 @@ section {
 footer {}
 
 
+/* Mobile Menu */
+
+.menu-button {
+    font-size: 1em;
+    padding: 8px 12px;
+    border: 1px solid $cream;
+    color: #fff;
+    @include rounded(5px);
+    z-index: 999;
+    background: $link;
+    cursor: pointer;
+    outline: none;
+    @include breakpoint(($desktop,
+    $ipad)) {
+        display: none;
+    }
+}
+
+.open {
+    background: $cream;
+    color: $link;
+}
+
+
 /* Social Media */
+
+.socialbar {
+    position: absolute;
+    @include breakpoint(($desktop,
+    $ipad)) {
+        top: 19px;
+        right: 10px;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+    @include breakpoint($portable) {
+        top: 19px;
+        right: 110px;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+    @include breakpoint($smartphone) {
+        top: 21px;
+        right: 74px;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+    .menu {
+        li {
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+            a {
+                display: block;
+                font-size: 20px;
+                width: 32px;
+                height: 24px;
+                padding-top: 6px;
+                @include rounded(5px);
+                transition: background ease-in-out 0.5s;
+                @include breakpoint(($desktop,
+                $ipad)) {
+                    color: #fff;
+                    background: $link;
+                    border: 1px solid $cream;
+                }
+                @include breakpoint(($portable,
+                $smartphone)) {
+                    color: $link;
+                }
+                &:hover {
+                    background: $cream;
+                    color: $link;
+                }
+            }
+        }
+    }
+}

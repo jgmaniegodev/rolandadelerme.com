@@ -22,7 +22,9 @@
                                 <?php the_custom_logo(); ?>
                                 <nav role="navigation">
                                     <?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
+                                    <?php wp_nav_menu( array('theme_location' => 'mobile')); ?>
                                 </nav>
+                                <button class="menu-button"><i class="fa fa-bars" aria-hidden="true"></i></button>
                                 <div class="socialbar">
                                     <?php wp_nav_menu( array('theme_location' => 'social') ); ?>
                                 </div>
