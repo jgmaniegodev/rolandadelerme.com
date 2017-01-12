@@ -3,3 +3,119 @@ body.custom-background {
     background-size: cover !important;
     background-position: center top !important;
 }
+
+
+/* global form */
+
+div.wpcf7-validation-errors {
+    border: 0;
+}
+
+.wpcf7-response-output {
+    float: none;
+    &:after {
+        display: block;
+        content: " ";
+        height: 0;
+        clear: both;
+    }
+}
+
+.wpcf7-response-output {
+    padding: 12px;
+}
+
+.wpcf7-validation-errors {
+    background: rgba(255, 0, 0, 0.3);
+    border: 1px solid red;
+}
+
+.col-container {
+    &:after {
+        display: block;
+        content: " ";
+        height: 0;
+        clear: both;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea {
+    padding: 12px;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+input[type="button"],
+input[type="submit"] {
+    padding: 0.7em 1em;
+    font-size: 1em;
+}
+
+.wpcf7-not-valid-tip {
+    padding: 8px;
+    background: rgba(255, 0, 0, 0.3);
+    border: 1px solid red;
+    margin-bottom: 12px;
+}
+
+.wpcf7 {
+    input[type="submit"] {
+        background: $cream url('img/forms/button_gr.png') repeat-x;
+        background-position: bottom center;
+        border: 1px solid $link;
+        font-weight: bold;
+        margin-top: 12px;
+        @include rounded(6px);
+        cursor: pointer;
+        &:hover {
+            background-position: top center;
+            color: $link;
+        }
+    }
+}
+
+
+/* ninja forms */
+
+.nf-form-wrap {
+    @include breakpoint(($desktop, $ipad, $portable)) {
+        padding: 1.2em;
+        background-color: rgba(255, 255, 255, .6);
+    }
+    @include breakpoint($smartphone) {
+        padding: 3% 0;
+    }
+}
+
+.nf-before-form-content {
+    padding: 1em;
+    background-color: rgba(0, 255, 0, 0.2);
+    margin-bottom: 1em;
+}
+
+.submit-wrap {
+    text-align: center;
+}
+
+.submit-wrap {
+    input[type="button"] {
+        background: $cream url('img/forms/button_gr.png') repeat-x;
+        background-position: bottom center;
+        border: 1px solid $link;
+        font-weight: bold;
+        @include rounded(6px);
+        cursor: pointer;
+        &:hover {
+            background-position: top center;
+            color: $link;
+        }
+    }
+}

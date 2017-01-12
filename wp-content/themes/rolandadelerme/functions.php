@@ -156,3 +156,12 @@ function get_wppage($slug){
     // reset post data (important!)
     wp_reset_postdata();
 }
+/*Remove empty paragraph tags from the_content*/
+function removeEmptyParagraphs($content) {
+
+    /*$pattern = "/<p[^>]*><\\/p[^>]*>/";   
+    $content = preg_replace($pattern, '', $content);*/
+    $content = str_replace("<p></p>","",$content);
+    return $content;
+}
+add_filter('the_content', 'removeEmptyParagraphs',99999);

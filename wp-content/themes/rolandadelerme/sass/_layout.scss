@@ -18,6 +18,12 @@ $smartphone: 'only screen' max-width 480px;
 .wrapper {
     margin: 0 auto;
     min-width: 320px;
+    &:after {
+        display: block;
+        content: " ";
+        height: 0;
+        clear: both;
+    }
 }
 
 .overlay-bg {
@@ -236,6 +242,11 @@ $smartphone: 'only screen' max-width 480px;
                     >li {
                         display: inline-block;
                         padding: 26px 12px;
+                        >a {
+                            &:hover {
+                                color: $cream;
+                            }
+                        }
                     }
                 }
             }
@@ -478,5 +489,65 @@ $smartphone: 'only screen' max-width 480px;
     }
     .menu-mobile-menu-container {
         display: none;
+    }
+}
+
+
+/* images */
+
+img {
+    &.alignleft {
+        float: left;
+        margin-right: 12px;
+        margin-bottom: 12px;
+        border: 4px solid $link;
+    }
+    &.alignright {
+        float: right;
+        margin-left: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+
+/* columns */
+
+.col-1 {
+    @include span(12 of 12 split);
+}
+
+.col-2 {
+    @include breakpoint(($desktop, $ipad, $portable)) {
+        @include span(6 of 12 split);
+    }
+    @include breakpoint($smartphone) {
+        @include span(12 of 12 split);
+    }
+}
+
+.col-3 {
+    @include breakpoint(($desktop, $ipad)) {
+        @include span(4 of 12 split);
+    }
+    @include breakpoint(($portable, $smartphone)) {
+        @include span(12 of 12 split);
+    }
+}
+
+.col-4 {
+    @include breakpoint(($desktop, $ipad)) {
+        @include span(3 of 12 split)
+    }
+    @include breakpoint(($portable, $smartphone)) {
+        @include span(12 of 12 split);
+    }
+}
+
+.col-5 {
+    @include breakpoint(($desktop, $ipad)) {
+        @include span(2 of 12 split);
+    }
+    @include breakpoint(($portable, $smartphone)) {
+        @include span(12 of 12 split);
     }
 }

@@ -13,6 +13,7 @@ Text Domain: rolandadelerme
 This is an exclusive theme.
 */
 
+@import "grids";
 @import "meyer-reset";
 @import "variables";
 @import "mixins";
@@ -260,20 +261,24 @@ nav {}
 
 section {
     .wrapper {
-        padding: 3% 7%;
+        padding: 3% 3%;
         box-sizing: border-box;
     }
 }
 
 #about-me {
     background-color: $cream;
+    background-image: url('img/img01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
     .wrapper {
         @include addSeparator;
     }
 }
 
 #services {
-    background-image: url('img/clouds-wallpaper-7.jpg');
+    background: $cream url('img/clouds.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -284,7 +289,10 @@ section {
 }
 
 #contact {
-    background-color: $cream;
+    background: $cream url('img/IMG_1521.png') no-repeat;
+    background-size: cover;
+    background-position: right center;
+    /*background-attachment: fixed;*/
     .wrapper {
         @include addSeparator;
     }
@@ -293,7 +301,13 @@ section {
 
 /* Footer */
 
-footer {}
+footer {
+    background: #fff url('img/ft.jpg') no-repeat;
+    background-position: bottom center;
+    border-top: 4px solid $link;
+    min-height: 150px;
+    padding: 1em;
+}
 
 
 /* Mobile Menu */
@@ -374,6 +388,120 @@ footer {}
                     color: $link;
                 }
             }
+        }
+    }
+}
+
+
+/* custom box */
+
+.custom-box {
+    min-height: 300px;
+    position: relative;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    color: $cream;
+    .top {
+        float: left;
+        width: calc(50% - 73px);
+        width: -o-calc(50% - 73px);
+        width: -webkit-calc(50% - 73px);
+        width: -moz-calc(50% - 73px);
+        height: 44px;
+    }
+    .btm {
+        float: left;
+        width: calc(50% - 73px);
+        width: -o-calc(50% - 73px);
+        width: -webkit-calc(50% - 73px);
+        width: -moz-calc(50% - 73px);
+        height: 48px;
+    }
+    .top-elements {
+        &:after {
+            display: block;
+            height: 0;
+            content: " ";
+            clear: both;
+        }
+    }
+    .box-corner {
+        background: url('img/boxes/box_pattern.png') no-repeat;
+        height: 60px;
+        width: 52px;
+        float: left;
+    }
+    .top-left {
+        background-position: 0px -1px;
+    }
+    .top-right {
+        background-position: -130px -1px;
+    }
+    .top {
+        background: url('img/boxes/top_box_border.png') repeat-x;
+        margin-top: 16px;
+    }
+    .btm {
+        background: url('img/boxes/bottom_box_border.png') repeat-x;
+        margin-top: -2px;
+    }
+    .top-center,
+    .btm-center {
+        width: 40px;
+        height: 60px;
+        margin: 0 auto;
+        float: left;
+    }
+    .top-center {
+        background: url('img/boxes/top_box_border_flower.png') no-repeat;
+    }
+    .btm-center {
+        background: url('img/boxes/bottom_box_border_flower.png') no-repeat;
+    }
+    .btm-left {
+        background-position: 0 -117px;
+    }
+    .btm-right {
+        background-position: -130px -117px;
+    }
+    .middle-elements {
+        position: relative;
+        overflow: hidden;
+        .middle-center {
+            padding-bottom: 99999px;
+            margin-bottom: -99999px;
+            width: calc(100% - 53px);
+            float: left;
+            margin-left: 25px;
+            padding-left: 6%;
+            padding-right: 6%;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 1.2em;
+            background: #644633;
+            ul {
+                list-style-type: none;
+                li {
+                    border-bottom: 1px solid #736040;
+                    padding: 1em;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+        .box-side {
+            padding-bottom: 99999px;
+            margin-bottom: -99999px;
+            width: 15px;
+            float: left;
+        }
+        .middle-left {
+            margin-left: 11px;
+            background: url('img/boxes/left_box_border.png') repeat-y;
+        }
+        .middle-right {
+            background: url('img/boxes/right_box_border.png') repeat-y;
         }
     }
 }

@@ -28,6 +28,7 @@
     
     p {
         line-height: 150%;
+        margin-bottom: 1em;
         @include breakpoint(($desktop, $ipad, $portable)) {
             font-size: 1em;
         }

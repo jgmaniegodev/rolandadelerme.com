@@ -68,6 +68,13 @@ $smartphone: 'only screen' (min-device-width 320px) (max-device-width 480px);
   min-width: 320px;
 }
 
+.wrapper:after {
+  display: block;
+  content: " ";
+  height: 0;
+  clear: both;
+}
+
 .overlay-bg {
   width: 100%;
   height: 100%;
@@ -275,6 +282,9 @@ $smartphone: 'only screen' (min-device-width 320px) (max-device-width 480px);
   .navbar-menu-container nav .menu-primary-container .menu > li {
     display: inline-block;
     padding: 26px 12px;
+  }
+  .navbar-menu-container nav .menu-primary-container .menu > li > a:hover {
+    color: #eeeac8;
   }
   .saints-icons #saint-one {
     top: 138px;
@@ -500,10 +510,220 @@ $smartphone: 'only screen' (min-device-width 320px) (max-device-width 480px);
   }
 }
 
+/* images */
+img.alignleft {
+  float: left;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  border: 4px solid #6e4213;
+}
+
+img.alignright {
+  float: right;
+  margin-left: 12px;
+  margin-bottom: 12px;
+}
+
+/* columns */
+.col-1 {
+  width: 98.33333%;
+  float: left;
+  margin-left: 0.83333%;
+  margin-right: 0.83333%;
+}
+
+@media only screen and (min-width: 1024px), only screen and (min-width: 769px) and (max-width: 1024px), only screen and (min-width: 480px) and (max-width: 768px) {
+  .col-2 {
+    width: 48.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .col-2 {
+    width: 98.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+}
+
+@media only screen and (min-width: 1024px), only screen and (min-width: 769px) and (max-width: 1024px) {
+  .col-3 {
+    width: 31.66667%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px), only screen and (max-width: 480px) {
+  .col-3 {
+    width: 98.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+}
+
+@media only screen and (min-width: 1024px), only screen and (min-width: 769px) and (max-width: 1024px) {
+  .col-4 {
+    width: 23.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px), only screen and (max-width: 480px) {
+  .col-4 {
+    width: 98.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+}
+
+@media only screen and (min-width: 1024px), only screen and (min-width: 769px) and (max-width: 1024px) {
+  .col-5 {
+    width: 15%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px), only screen and (max-width: 480px) {
+  .col-5 {
+    width: 98.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+}
+
 body.custom-background {
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center top !important;
+}
+
+/* global form */
+div.wpcf7-validation-errors {
+  border: 0;
+}
+
+.wpcf7-response-output {
+  float: none;
+}
+
+.wpcf7-response-output:after {
+  display: block;
+  content: " ";
+  height: 0;
+  clear: both;
+}
+
+.wpcf7-response-output {
+  padding: 12px;
+}
+
+.wpcf7-validation-errors {
+  background: rgba(255, 0, 0, 0.3);
+  border: 1px solid red;
+}
+
+.col-container:after {
+  display: block;
+  content: " ";
+  height: 0;
+  clear: both;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea {
+  padding: 12px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+input[type="button"],
+input[type="submit"] {
+  padding: 0.7em 1em;
+  font-size: 1em;
+}
+
+.wpcf7-not-valid-tip {
+  padding: 8px;
+  background: rgba(255, 0, 0, 0.3);
+  border: 1px solid red;
+  margin-bottom: 12px;
+}
+
+.wpcf7 input[type="submit"] {
+  background: #eeeac8 url("img/forms/button_gr.png") repeat-x;
+  background-position: bottom center;
+  border: 1px solid #6e4213;
+  font-weight: bold;
+  margin-top: 12px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  cursor: pointer;
+}
+
+.wpcf7 input[type="submit"]:hover {
+  background-position: top center;
+  color: #6e4213;
+}
+
+/* ninja forms */
+@media only screen and (min-width: 1024px), only screen and (min-width: 769px) and (max-width: 1024px), only screen and (min-width: 480px) and (max-width: 768px) {
+  .nf-form-wrap {
+    padding: 1.2em;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nf-form-wrap {
+    padding: 3% 0;
+  }
+}
+
+.nf-before-form-content {
+  padding: 1em;
+  background-color: rgba(0, 255, 0, 0.2);
+  margin-bottom: 1em;
+}
+
+.submit-wrap {
+  text-align: center;
+}
+
+.submit-wrap input[type="button"] {
+  background: #eeeac8 url("img/forms/button_gr.png") repeat-x;
+  background-position: bottom center;
+  border: 1px solid #6e4213;
+  font-weight: bold;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-wrap input[type="button"]:hover {
+  background-position: top center;
+  color: #6e4213;
 }
 
 body {
@@ -536,6 +756,7 @@ h6 {
 
 p {
   line-height: 150%;
+  margin-bottom: 1em;
 }
 
 @media only screen and (min-width: 1024px), only screen and (min-width: 769px) and (max-width: 1024px), only screen and (min-width: 480px) and (max-width: 768px) {
@@ -819,12 +1040,16 @@ nav ul li a {
 
 /* Sections */
 section .wrapper {
-  padding: 3% 7%;
+  padding: 3% 3%;
   box-sizing: border-box;
 }
 
 #about-me {
   background-color: #eeeac8;
+  background-image: url("img/img01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
 }
 
 #about-me .wrapper {
@@ -834,7 +1059,7 @@ section .wrapper {
 }
 
 #services {
-  background-image: url("img/clouds-wallpaper-7.jpg");
+  background: #eeeac8 url("img/clouds.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -848,7 +1073,10 @@ section .wrapper {
 }
 
 #contact {
-  background-color: #eeeac8;
+  background: #eeeac8 url("img/IMG_1521.png") no-repeat;
+  background-size: cover;
+  background-position: right center;
+  /*background-attachment: fixed;*/
 }
 
 #contact .wrapper {
@@ -858,6 +1086,14 @@ section .wrapper {
 }
 
 /* Footer */
+footer {
+  background: #fff url("img/ft.jpg") no-repeat;
+  background-position: bottom center;
+  border-top: 4px solid #6e4213;
+  min-height: 150px;
+  padding: 1em;
+}
+
 /* Mobile Menu */
 .menu-button {
   font-size: 1em;
@@ -955,4 +1191,133 @@ section .wrapper {
 .socialbar .menu li a:hover {
   background: #eeeac8;
   color: #6e4213;
+}
+
+/* custom box */
+.custom-box {
+  min-height: 300px;
+  position: relative;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  color: #eeeac8;
+}
+
+.custom-box .top {
+  float: left;
+  width: calc(50% - 73px);
+  width: -o-calc(50% - 73px);
+  width: -moz-calc(50% - 73px);
+  height: 44px;
+}
+
+.custom-box .btm {
+  float: left;
+  width: calc(50% - 73px);
+  width: -o-calc(50% - 73px);
+  width: -moz-calc(50% - 73px);
+  height: 48px;
+}
+
+.custom-box .top-elements:after {
+  display: block;
+  height: 0;
+  content: " ";
+  clear: both;
+}
+
+.custom-box .box-corner {
+  background: url("img/boxes/box_pattern.png") no-repeat;
+  height: 60px;
+  width: 52px;
+  float: left;
+}
+
+.custom-box .top-left {
+  background-position: 0px -1px;
+}
+
+.custom-box .top-right {
+  background-position: -130px -1px;
+}
+
+.custom-box .top {
+  background: url("img/boxes/top_box_border.png") repeat-x;
+  margin-top: 16px;
+}
+
+.custom-box .btm {
+  background: url("img/boxes/bottom_box_border.png") repeat-x;
+  margin-top: -2px;
+}
+
+.custom-box .top-center,
+.custom-box .btm-center {
+  width: 40px;
+  height: 60px;
+  margin: 0 auto;
+  float: left;
+}
+
+.custom-box .top-center {
+  background: url("img/boxes/top_box_border_flower.png") no-repeat;
+}
+
+.custom-box .btm-center {
+  background: url("img/boxes/bottom_box_border_flower.png") no-repeat;
+}
+
+.custom-box .btm-left {
+  background-position: 0 -117px;
+}
+
+.custom-box .btm-right {
+  background-position: -130px -117px;
+}
+
+.custom-box .middle-elements {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-box .middle-elements .middle-center {
+  padding-bottom: 99999px;
+  margin-bottom: -99999px;
+  width: calc(100% - 53px);
+  float: left;
+  margin-left: 25px;
+  padding-left: 6%;
+  padding-right: 6%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.2em;
+  background: #644633;
+}
+
+.custom-box .middle-elements .middle-center ul {
+  list-style-type: none;
+}
+
+.custom-box .middle-elements .middle-center ul li {
+  border-bottom: 1px solid #736040;
+  padding: 1em;
+}
+
+.custom-box .middle-elements .middle-center ul li:last-child {
+  border-bottom: none;
+}
+
+.custom-box .middle-elements .box-side {
+  padding-bottom: 99999px;
+  margin-bottom: -99999px;
+  width: 15px;
+  float: left;
+}
+
+.custom-box .middle-elements .middle-left {
+  margin-left: 11px;
+  background: url("img/boxes/left_box_border.png") repeat-y;
+}
+
+.custom-box .middle-elements .middle-right {
+  background: url("img/boxes/right_box_border.png") repeat-y;
 }
