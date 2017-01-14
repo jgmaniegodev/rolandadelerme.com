@@ -78,9 +78,25 @@
                     <?php get_wppage('about-me'); ?>
                 </div>
             </section>
+            <section id="articles">
+                <div class="wrapper">
+                    <?php get_wppage('articles'); ?>
+                </div>
+            </section>
             <section id="services">
                 <div class="wrapper">
                     <?php get_wppage('services'); ?>
+                </div>
+            </section>
+            
+            <section id="readings">
+                <div class="wrapper">
+                    <?php get_wppage('readings'); ?>
+                    </div>
+            </section>
+            <section id="services-gallery">
+                <div class="wrapper">
+                    <?php get_wppage('services-gallery'); ?>
                 </div>
             </section>
             <section id="contact">

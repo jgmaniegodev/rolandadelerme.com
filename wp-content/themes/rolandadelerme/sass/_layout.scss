@@ -26,6 +26,19 @@ $smartphone: 'only screen' max-width 480px;
     }
 }
 
+body {
+    @include breakpoint(($desktop, $ipad, $portable)) {
+        font-size: 1em;
+    }
+    @include breakpoint($smartphone) {
+        font-size: 0.9em;
+    }
+}
+
+#page {
+    overflow: hidden;
+}
+
 .overlay-bg {
     width: 100%;
     height: 100%;
@@ -206,9 +219,6 @@ $smartphone: 'only screen' max-width 480px;
 
 @include breakpoint ( $desktop) {
     /* Styles */
-    body {
-        background: floralwhite;
-    }
     section {
         min-height: 380px;
     }
@@ -328,9 +338,6 @@ $smartphone: 'only screen' max-width 480px;
 
 @include breakpoint ( $ipad) {
     /* Styles */
-    body {
-        background: mintcream;
-    }
     section {
         min-height: 300px;
     }
@@ -497,15 +504,73 @@ $smartphone: 'only screen' max-width 480px;
 
 img {
     &.alignleft {
-        float: left;
+        @include breakpoint(($desktop, $ipad, $portable)) {
+            float: left;
+        }
+        @include breakpoint($smartphone) {
+            display: block;
+            margin: 12px auto;
+        }
         margin-right: 12px;
         margin-bottom: 12px;
         border: 4px solid $link;
     }
     &.alignright {
-        float: right;
+        @include breakpoint(($desktop, $ipad, $portable)) {
+            float: right;
+        }
+        @include breakpoint($smartphone) {
+            display: block;
+            margin: 12px auto;
+        }
         margin-left: 12px;
         margin-bottom: 12px;
+    }
+    &.aligncenter {
+        margin: 12 auto;
+    }
+}
+
+figure {
+    border: 1px solid $cream;
+    background: #fff;
+    padding: 4px;
+    overflow: hidden;
+    &.alignleft {
+        @include breakpoint(($desktop, $ipad, $portable)) {
+            float: left;
+        }
+        @include breakpoint($smartphone) {
+            margin: 12px auto;
+        }
+        margin-right: 12px;
+        margin-bottom: 12px;
+    }
+    &.alignright {
+        @include breakpoint(($desktop, $ipad, $portable)) {
+            float: right;
+        }
+        @include breakpoint($smartphone) {
+            margin: 12px auto;
+        }
+        margin-left: 12px;
+        margin-bottom: 12px;
+    }
+    figcaption {
+        background: #fbfbfb;
+        padding: 4px;
+    }
+}
+
+#articles {
+    figure {
+        height: 300px;
+    }
+}
+
+#readings {
+    figure {
+        height: 200px;
     }
 }
 

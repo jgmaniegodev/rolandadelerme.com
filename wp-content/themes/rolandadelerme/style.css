@@ -75,6 +75,22 @@ $smartphone: 'only screen' (min-device-width 320px) (max-device-width 480px);
   clear: both;
 }
 
+@media only screen and (min-width: 1024px), only screen and (min-width: 769px) and (max-width: 1024px), only screen and (min-width: 480px) and (max-width: 768px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 0.9em;
+  }
+}
+
+#page {
+  overflow: hidden;
+}
+
 .overlay-bg {
   width: 100%;
   height: 100%;
@@ -245,9 +261,6 @@ $smartphone: 'only screen' (min-device-width 320px) (max-device-width 480px);
 
 @media only screen and (min-width: 1024px) {
   /* Styles */
-  body {
-    background: floralwhite;
-  }
   section {
     min-height: 380px;
   }
@@ -356,9 +369,6 @@ $smartphone: 'only screen' (min-device-width 320px) (max-device-width 480px);
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   /* Styles */
-  body {
-    background: mintcream;
-  }
   section {
     min-height: 300px;
   }
@@ -512,16 +522,98 @@ $smartphone: 'only screen' (min-device-width 320px) (max-device-width 480px);
 
 /* images */
 img.alignleft {
-  float: left;
   margin-right: 12px;
   margin-bottom: 12px;
   border: 4px solid #6e4213;
 }
 
+@media only screen and (min-width: 1024px), only screen and (min-width: 769px) and (max-width: 1024px), only screen and (min-width: 480px) and (max-width: 768px) {
+  img.alignleft {
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  img.alignleft {
+    display: block;
+    margin: 12px auto;
+  }
+}
+
 img.alignright {
-  float: right;
   margin-left: 12px;
   margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 1024px), only screen and (min-width: 769px) and (max-width: 1024px), only screen and (min-width: 480px) and (max-width: 768px) {
+  img.alignright {
+    float: right;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  img.alignright {
+    display: block;
+    margin: 12px auto;
+  }
+}
+
+img.aligncenter {
+  margin: 12 auto;
+}
+
+figure {
+  border: 1px solid #eeeac8;
+  background: #fff;
+  padding: 4px;
+  overflow: hidden;
+}
+
+figure.alignleft {
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 1024px), only screen and (min-width: 769px) and (max-width: 1024px), only screen and (min-width: 480px) and (max-width: 768px) {
+  figure.alignleft {
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  figure.alignleft {
+    margin: 12px auto;
+  }
+}
+
+figure.alignright {
+  margin-left: 12px;
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 1024px), only screen and (min-width: 769px) and (max-width: 1024px), only screen and (min-width: 480px) and (max-width: 768px) {
+  figure.alignright {
+    float: right;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  figure.alignright {
+    margin: 12px auto;
+  }
+}
+
+figure figcaption {
+  background: #fbfbfb;
+  padding: 4px;
+}
+
+#articles figure {
+  height: 300px;
+}
+
+#readings figure {
+  height: 200px;
 }
 
 /* columns */
@@ -732,26 +824,38 @@ body {
 
 h1 {
   font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 h2 {
   font-size: 1.7em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 h3 {
   font-size: 1.7em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 h4 {
   font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 h5 {
   font-size: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 h6 {
   font-size: 0.8em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 p {
@@ -784,6 +888,7 @@ nav ul li a {
   line-height: 150%;
   text-align: center;
   color: #6e4213;
+  margin: 0px;
 }
 
 /* General styles */
@@ -1058,6 +1163,14 @@ section .wrapper {
   background-position: top center;
 }
 
+#articles {
+  background: #fff;
+}
+
+#services-gallery {
+  background: #644633;
+}
+
 #services {
   background: #eeeac8 url("img/clouds.jpg");
   background-repeat: no-repeat;
@@ -1073,7 +1186,6 @@ section .wrapper {
 }
 
 #contact {
-  background: #eeeac8 url("img/IMG_1521.png") no-repeat;
   background-size: cover;
   background-position: right center;
   /*background-attachment: fixed;*/

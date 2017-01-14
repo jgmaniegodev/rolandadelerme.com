@@ -277,6 +277,14 @@ section {
     }
 }
 
+#articles {
+    background: #fff;
+}
+
+#services-gallery {
+    background: #644633;
+}
+
 #services {
     background: $cream url('img/clouds.jpg');
     background-repeat: no-repeat;
@@ -289,7 +297,6 @@ section {
 }
 
 #contact {
-    background: $cream url('img/IMG_1521.png') no-repeat;
     background-size: cover;
     background-position: right center;
     /*background-attachment: fixed;*/
